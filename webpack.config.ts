@@ -4,8 +4,8 @@ import webpack from "webpack";
 
 const config: webpack.Configuration = {
   entry: {
-    "bundle": "./src/client.ts",
-    __less: "./public/style/main.less",
+    "bundle": "./app/main.ts",
+    __less: "./docs/style/main.less",
   },
   module: {
     rules: [
