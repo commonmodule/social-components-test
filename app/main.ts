@@ -1,4 +1,4 @@
-import { Router } from "@common-module/app";
+import { Router, SPAInitializer } from "@common-module/app";
 import ChatView from "./ChatView.js";
 import { SocialCompConfig } from "@common-module/social-components";
 
@@ -13,3 +13,5 @@ Avatar: ${author.avatarUrl}`;
 };
 
 Router.add("/chat", ChatView);
+
+SPAInitializer.init();
