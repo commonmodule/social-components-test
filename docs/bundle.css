@@ -423,6 +423,28 @@ dialog.modal.structured-modal > footer {
   justify-content: flex-end;
   gap: 16px;
 }
+.author-name-display {
+  font-weight: bold;
+}
+.author-name-display:hover {
+  text-decoration: underline;
+}
+.author-avatar-display > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+ul.chat-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+li.chat-message-list-item {
+  display: flex;
+  gap: 16px;
+}
 .wallet-connection-content {
   display: flex;
   flex-direction: column;
