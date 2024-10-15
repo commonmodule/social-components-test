@@ -1,4 +1,4 @@
 <script>
-    sessionStorage.initialPath = location.pathname + location.search;
+    sessionStorage.initialPath = `${location.pathname}${location.search}`.replace("/social-components-test/", "/");
     location.replace("/social-components-test/");
 </script>
