@@ -1,6 +1,10 @@
 import { Router, SPAInitializer } from "@common-module/app";
 import ChatView from "./ChatView.js";
 import { SocialCompConfig } from "@common-module/social-components";
+import { MaterialIcon } from "@common-module/material-icons";
+
+SocialCompConfig.editMenuIcon = new MaterialIcon("edit");
+SocialCompConfig.deleteMenuIcon = new MaterialIcon("delete");
 
 SocialCompConfig.showAuthorInfo = (author) => {
   const message = `Author Information:

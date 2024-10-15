@@ -4,6 +4,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@common-module/material-icons": "^0.1.1",
     "@common-module/social-components": "^0.1.0"
   },
   "devDependencies": {

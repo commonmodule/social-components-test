@@ -167,6 +167,8 @@ button.contained .material-loading-spinner > svg > circle {
   --page-bg-color: #000;
   --paragraph-text-color: #fff;
   --placeholder-color: rgba(255, 255, 255, 0.5);
+  --selection-bg-color: #fff;
+  --selection-text-color: #000;
   --overlay-color: rgba(34, 34, 34, 0.6);
   --modal-bg-color: #171717;
   --text-button-text-color: #fff;
@@ -182,6 +184,11 @@ button.contained .material-loading-spinner > svg > circle {
   --input-border-color: #4e4e4e;
   --input-hover-border-color: #8c8c8c;
   --input-focus-border-color: #e3e3e3;
+  --dropdown-menu-bg-color: #2f2f2f;
+  --dropdown-menu-border-color: rgba(255, 255, 255, 0.1);
+  --dropdown-menu-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  --dropdown-menu-separator-color: #e3e3e3;
+  --dropdown-menu-item-hover-bg-color: #424242;
   --loading-spinner-color: #fff;
   --loading-spinner-on-contained-button-color: #000;
 }
@@ -230,6 +237,10 @@ dialog {
 }
 ::placeholder {
   color: var(--placeholder-color);
+}
+::selection {
+  background-color: var(--selection-bg-color);
+  color: var(--selection-text-color);
 }
 /* App Components */
 button {
@@ -382,6 +393,39 @@ button.outlined:active:not(.disabled) {
 }
 .dropdown-menu {
   position: fixed;
+  background-color: var(--dropdown-menu-bg-color);
+  border: 1px solid var(--dropdown-menu-border-color);
+  border-radius: 16px;
+  box-shadow: var(--dropdown-menu-shadow);
+  padding: 8px;
+  min-width: 280px;
+}
+.dropdown-menu > main > .dropdown-menu-group {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu > main > .dropdown-menu-group:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--dropdown-menu-separator-color);
+}
+.dropdown-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.dropdown-menu-item > .icon {
+  font-size: 22px;
+}
+.dropdown-menu-item:hover {
+  background-color: var(--dropdown-menu-item-hover-bg-color);
 }
 dialog.modal {
   width: 90%;
