@@ -17,6 +17,10 @@ Avatar: ${author.avatarUrl}`;
   alert(message);
 };
 
+if (!(window as any).isDevMode) {
+  Router.prefix = "/social-components-test";
+}
+
 Router.add("/chat", ChatView);
 
 SPAInitializer.init();
