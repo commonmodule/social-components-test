@@ -5,6 +5,7 @@ import { MaterialIcon } from "@common-module/material-icons";
 
 SocialCompConfig.editMenuIcon = new MaterialIcon("edit");
 SocialCompConfig.deleteMenuIcon = new MaterialIcon("delete");
+SocialCompConfig.sendButtonIcon = new MaterialIcon("arrow_upward");
 
 SocialCompConfig.showAuthorInfo = (author) => {
   const message = `Author Information:
