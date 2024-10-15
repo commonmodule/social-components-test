@@ -115,14 +115,14 @@ meter {
   \*****************************************************************************************************************/
 @font-face {
   font-family : Söhne;
-  src         : url(./fonts/soehne.woff2) format("woff2");
+  src         : url(/fonts/soehne.woff2) format("woff2");
   font-weight : 400;
   font-display: swap;
 }
 
 @font-face {
   font-family : Söhne;
-  src         : url(./fonts/soehne-bold.woff2) format("woff2");
+  src         : url(/fonts/soehne-bold.woff2) format("woff2");
   font-weight : 700;
   font-display: swap;
 }

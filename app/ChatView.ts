@@ -3,7 +3,7 @@ import {
   ChatMessageForm,
   ChatMessageList,
 } from "@common-module/social-components";
-import testChatHistory from "./testChatHistory.js";
+import getTestChatHistory from "./getTestChatHistory.js";
 
 export default class ChatView extends View {
   constructor() {
@@ -12,7 +12,7 @@ export default class ChatView extends View {
       ".chat-view",
       el(
         "main",
-        new ChatMessageList(testChatHistory, {
+        new ChatMessageList(getTestChatHistory(), {
           onEdit: async (messageId, newMessage) => {
             //TODO:
           },
