@@ -231,6 +231,7 @@ dialog {
 ::placeholder {
   color: var(--placeholder-color);
 }
+/* App Components */
 button {
   display: flex;
   align-items: center;
@@ -379,6 +380,9 @@ button.outlined:active:not(.disabled) {
 .select > select:hover {
   border-color: var(--input-hover-border-color);
 }
+.dropdown-menu {
+  position: fixed;
+}
 dialog.modal {
   width: 90%;
   max-width: 600px;
@@ -423,6 +427,7 @@ dialog.modal.structured-modal > footer {
   justify-content: flex-end;
   gap: 16px;
 }
+/* Social Components */
 .author-name-display {
   font-weight: bold;
 }
@@ -444,6 +449,15 @@ ul.chat-message-list {
 li.chat-message-list-item {
   display: flex;
   gap: 16px;
+}
+li.chat-message-list-item > .avatar {
+  flex-shrink: 0;
+}
+li.chat-message-list-item > main {
+  flex-grow: 1;
+}
+.chat-message-content-display.editing > p {
+  display: none;
 }
 .wallet-connection-content {
   display: flex;

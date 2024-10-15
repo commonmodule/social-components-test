@@ -10,7 +10,17 @@ export default class ChatView extends View {
     super();
     this.container = el(
       ".chat-view",
-      el("main", new ChatMessageList(testChatHistory)),
+      el(
+        "main",
+        new ChatMessageList(testChatHistory, {
+          onEdit: async (messageId, newMessage) => {
+            //TODO:
+          },
+          onDelete: async (messageId) => {
+            //TODO:
+          },
+        }),
+      ),
       el("footer", new ChatMessageForm()),
     ).appendTo(BodyNode);
   }
