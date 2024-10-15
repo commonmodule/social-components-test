@@ -1,20 +1,21 @@
+import { Router } from "@common-module/app";
 import { Author, ChatMessageGroup } from "@common-module/social-components";
 
 const testAuthors: Author[] = [
   {
     id: "user1",
     name: "Alice",
-    avatarUrl: "/avatars/alice.webp",
+    avatarUrl: Router.prefix + "/avatars/alice.webp",
   },
   {
     id: "user2",
     name: "Bob",
-    avatarUrl: "/avatars/bob.webp",
+    avatarUrl: Router.prefix + "/avatars/bob.webp",
   },
   {
     id: "user3",
     name: "Charlie",
-    avatarUrl: "/avatars/charlie.webp",
+    avatarUrl: Router.prefix + "/avatars/charlie.webp",
   },
 ];
 
