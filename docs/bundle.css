@@ -500,6 +500,8 @@ ul.chat-message-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  overflow-y: auto;
+  padding: 16px;
 }
 li.chat-message-list-item {
   display: flex;
@@ -515,31 +517,34 @@ li.chat-message-list-item > main {
   display: none;
 }
 .chat-message-form {
+  padding: 0 16px 8px;
+}
+.chat-message-form > form {
   display: flex;
   align-items: center;
   background-color: var(--chat-message-form-bg-color);
   border-radius: 26px;
   padding: 6px;
 }
-.chat-message-form > .input {
+.chat-message-form > form > .input {
   flex-grow: 1;
 }
-.chat-message-form > .input > input {
+.chat-message-form > form > .input > input {
   border: none;
 }
-.chat-message-form > .actions {
+.chat-message-form > form > .actions {
   display: flex;
   align-items: center;
   padding: 4px;
 }
-.chat-message-form > .actions > button {
+.chat-message-form > form > .actions > button {
   padding: 0;
   background-color: var(--chat-message-form-send-button-bg-color);
   width: 32px;
   height: 32px;
   min-height: auto;
 }
-.chat-message-form > .actions > button > .icon-container > .icon {
+.chat-message-form > form > .actions > button > .icon-container > .icon {
   font-size: 20px;
 }
 .wallet-connection-content {
@@ -607,5 +612,18 @@ li.chat-message-list-item > main {
   .wallet-login-popup > footer {
     padding: 24px !important;
   }
+}
+.chat-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chat-view > main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
