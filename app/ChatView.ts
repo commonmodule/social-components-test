@@ -1,4 +1,4 @@
-import { BodyNode, el, View } from "@common-module/app";
+import { BodyNode, el, Router, View } from "@common-module/app";
 import {
   ChatMessageForm,
   ChatMessageList,
@@ -6,22 +6,36 @@ import {
 import getTestChatHistory from "./getTestChatHistory.js";
 
 export default class ChatView extends View {
+  private messageList: ChatMessageList;
+
   constructor() {
     super();
     this.container = el(
       ".chat-view",
       el(
         "main",
-        new ChatMessageList(getTestChatHistory(), {
+        this.messageList = new ChatMessageList(getTestChatHistory(), {
           onEdit: async (messageId, newMessage) => {
-            //TODO:
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            this.messageList.editMessage(messageId, newMessage);
           },
           onDelete: async (messageId) => {
-            //TODO:
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            this.messageList.deleteMessage(messageId);
           },
         }),
       ),
-      el("footer", new ChatMessageForm()),
+      el(
+        "footer",
+        new ChatMessageForm(async (newMessage) => {
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+          this.messageList.addMessage({
+            id: "user1",
+            name: "Alice",
+            avatarUrl: Router.prefix + "/avatars/alice.webp",
+          }, { id: Date.now(), content: newMessage, reactions: [] });
+        }),
+      ),
     ).appendTo(BodyNode);
   }
 }

@@ -547,6 +547,37 @@ li.chat-message-list-item > main {
 .chat-message-form > form > .actions > button > .icon-container > .icon {
   font-size: 20px;
 }
+.chat-message-edit-form {
+  padding: 8px 0;
+}
+.chat-message-edit-form > form {
+  display: flex;
+  align-items: center;
+  background-color: var(--chat-message-form-bg-color);
+  border-radius: 26px;
+  padding: 6px;
+}
+.chat-message-edit-form > form > .input {
+  flex-grow: 1;
+}
+.chat-message-edit-form > form > .input > input {
+  border: none;
+}
+.chat-message-edit-form > form > .actions {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+.chat-message-edit-form > form > .actions > button {
+  padding: 0;
+  background-color: var(--chat-message-form-send-button-bg-color);
+  width: 32px;
+  height: 32px;
+  min-height: auto;
+}
+.chat-message-edit-form > form > .actions > button > .icon-container > .icon {
+  font-size: 20px;
+}
 .wallet-connection-content {
   display: flex;
   flex-direction: column;
