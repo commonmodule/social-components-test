@@ -105,6 +105,7 @@ function getTestChatHistory() {
           id: 14,
           content:
             "It's a web application for tracking daily habits. I'm still in the early stages, but I'm excited about it.",
+          replyTo: 10,
           reactions: [],
         },
         {
