@@ -1,5 +1,5 @@
-import { Router } from "@common-module/app";
-import { Author, ChatMessageGroup } from "@common-module/social-components";
+import { Router } from "@commonmodule/app";
+import { Author, ChatMessageGroup } from "@commonmodule/social-components";
 
 function getTestChatHistory() {
   const testAuthors: Author[] = [

@@ -1,13 +1,13 @@
-import { Router, SPAInitializer } from "@common-module/app";
+import { Router, SPAInitializer } from "@commonmodule/app";
+import { SocialCompConfig } from "@commonmodule/social-components";
+import { DeleteIcon, EditIcon, SendIcon } from "@commonmodule/svg-icons";
 import ChatView from "./ChatView.js";
-import { SocialCompConfig } from "@common-module/social-components";
-import { MaterialIcon } from "@common-module/material-icons";
 
-SocialCompConfig.editMenuIcon = new MaterialIcon("edit");
-SocialCompConfig.deleteMenuIcon = new MaterialIcon("delete");
-SocialCompConfig.sendButtonIcon = new MaterialIcon("arrow_upward");
+SocialCompConfig.EditMenuIcon = EditIcon;
+SocialCompConfig.DeleteMenuIcon = DeleteIcon;
+SocialCompConfig.SendMessageButtonIcon = SendIcon;
 
-SocialCompConfig.showAuthorInfo = (author) => {
+SocialCompConfig.showUserInfo = (author) => {
   const message = `Author Information:
 -------------------
 Name: ${author.name}

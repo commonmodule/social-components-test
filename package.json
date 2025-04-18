@@ -4,8 +4,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@common-module/material-icons": "^0.1.1",
-    "@common-module/social-components": "^0.1.0"
+    "@commonmodule/social-components": "^0.1.7",
+    "@commonmodule/svg-icons": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
